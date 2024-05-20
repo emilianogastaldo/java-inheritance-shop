@@ -19,7 +19,7 @@ public class Prodotto {
         this.nome = valueOrDefault(nome);
         this.descrizione = valueOrDefault(descrizione);
         this.prezzo = valueOrDefault(prezzo);
-        this.iva = valueOrDefault(prezzo);
+        this.iva = valueOrDefault(iva);
     }
     //    METODI
 //    Metodo per generare il code
@@ -80,8 +80,7 @@ public class Prodotto {
     }
     //Metodo per il prezzo pieno fatto con i BigDecimal
     public BigDecimal getFullPrice(){
-//        return BigDecimal.valueOf(123);
-        return prezzo.add(prezzo.multiply(iva)).setScale(2, RoundingMode.HALF_EVEN);
+        return prezzo.multiply(iva.divide(new BigDecimal(100))).add(prezzo).setScale(2, RoundingMode.HALF_EVEN);
     }
     // Metodo per il nome esteso
     public String getFullName(){
