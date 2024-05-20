@@ -26,4 +26,8 @@ public class Televisore extends Prodotto{
     public void setSmart(boolean smart) {
         isSmart = smart;
     }
+
+    public String toString() {
+        return "Televisore: " + getNome() + " Pollici: "+ pollici+ " Prezzo: " + getFullPrice()+"€.";
+    }
 }

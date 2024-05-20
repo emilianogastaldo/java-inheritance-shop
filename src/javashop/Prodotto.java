@@ -80,10 +80,16 @@ public class Prodotto {
     }
     //Metodo per il prezzo pieno fatto con i BigDecimal
     public BigDecimal getFullPrice(){
-        return prezzo.multiply(iva).add(prezzo).setScale(2, RoundingMode.HALF_EVEN);
+//        return BigDecimal.valueOf(123);
+        return prezzo.add(prezzo.multiply(iva.divide(BigDecimal.valueOf(100))).setScale(2, RoundingMode.HALF_EVEN));
     }
     // Metodo per il nome esteso
     public String getFullName(){
         return String.format("%06d", codice)+ " " + nome;
+    }
+
+//    Override su toString()
+    public String toString(){
+        return "Nome :" + nome + "Prezzo full: " + getFullPrice();
     }
 }
