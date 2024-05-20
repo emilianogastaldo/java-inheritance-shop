@@ -6,7 +6,7 @@ public class Cuffie extends Prodotto {
 
     private String colore;
     private boolean wireless;
-    Cuffie(String nome, String descrizione, String colore, boolean wireless, BigDecimal prezzo, BigDecimal iva){
+    Cuffie(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva, String colore, boolean wireless){
         super(nome, descrizione, prezzo, iva);
         this.colore = valueOrDefault(colore);
         this.wireless = wireless;

@@ -8,7 +8,7 @@ public class Smartphone extends Prodotto{
     private int imei;
     private int memoria;
 
-    Smartphone(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva, int imei, int memoria){
+    Smartphone(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva, int memoria){
         super(nome, descrizione, prezzo, iva);
         this.imei = imeiGenerator();
         this.memoria = memoria;
