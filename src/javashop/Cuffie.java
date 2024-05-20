@@ -19,4 +19,20 @@ public class Cuffie extends Prodotto {
         }
         return value;
     }
+
+    public String getColore() {
+        return colore;
+    }
+
+    public void setColore(String colore) {
+        this.colore = valueOrDefault(colore);
+    }
+
+    public boolean isWireless() {
+        return wireless;
+    }
+
+    public void setWireless(boolean wireless) {
+        this.wireless = wireless;
+    }
 }
